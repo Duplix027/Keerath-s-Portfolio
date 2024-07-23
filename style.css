@@ -14,6 +14,7 @@ html, body {
     background-color: rgb(30, 29, 29);
     height: 300vh;
     cursor: crosshair;
+ 
 }
 
 .pdf-container {
@@ -34,9 +35,9 @@ html, body {
 .hero {
     width: 100%;
     position: sticky;
-    overflow: scroll;
     border-radius: 20px;
     padding: 8px;
+    overflow: hidden;
     will-change: filter, transform;
 }
 
@@ -73,6 +74,7 @@ html, body {
 .social-media a:hover {
     background: lightslategray;
 }
+
 
 .social-media a i {
     font-size: 20px;
@@ -186,7 +188,6 @@ section:nth-child(4) {
     height: 100%;
     border-radius: 10px;
     padding: 2rem;
-    overflow: scroll;
     background-image: url("helen-ngoc-n-xJQ9nSIiJq4-unsplash.jpg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -200,7 +201,6 @@ section:nth-child(4) {
     height: 100%;
     border-radius: 10px;
     padding: 2rem;
-    overflow: scroll;
     background-image: url("jj-ying-7JX0-bfiuxQ-unsplash.jpg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -229,7 +229,7 @@ section:nth-child(4) {
     height: 100%;
     border-radius: 10px;
     padding: 2rem;
-    overflow: scroll;
+
     background-image: url(gradient-7258997_1280.webp);
     box-shadow: 0 2px 4px rgba(255, 255, 255, 0.5);
     margin-bottom: 20px;
@@ -253,18 +253,6 @@ section:nth-child(4) {
     padding: 15px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-@keyframes scroll {
-    from {
-        opacity: 0;
-        transform: translateY(100px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0px);
-    }
 }
 
 .project-card {
@@ -319,9 +307,9 @@ section:nth-child(4) {
     align-items: center;
     width: 200px;
     height: 200px;
+    overflow: hidden;
     border-radius: 50%;
     border: 5px solid white;
-    overflow: hidden;
     margin-bottom: 20px; /* Add margin bottom for space between image and text */
 }
 
@@ -345,3 +333,45 @@ section:nth-child(4) {
     font-weight: bold;
     color: #333;
 }
+
+.about-container{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the start (left) */
+    margin-left: 10px; /* Adjust the left margin as needed */
+}
+
+.about-container h1{
+    padding: 10px;
+    font-size: 50px;
+    
+}
+
+.about-container p{
+    margin: 10px;
+    color: #333;
+    font-family: tahoma;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+
+}
+
+.languages {
+    padding: 10px;
+   
+    display: flex;
+    align-items: center; /* Center align items vertically */
+    gap: 10px; /* Space between inline items */
+}
+
+.languages h2 {
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 2px solid white;
+    margin: 0; /* Remove default margins from <h2> */
+}
+
