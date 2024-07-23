@@ -266,7 +266,7 @@ section:nth-child(4) {
     padding: 10px;
     box-shadow: 2px 4px 8px rgb(255, 0, 0);
     margin: 50px;
-    margin-bottom: 250px;
+    margin-bottom: 200px;
 }
 
 .project-card img {
@@ -294,6 +294,7 @@ section:nth-child(4) {
 }
 
 .content-container {
+    position: relative; /* Enable positioning of child elements */
     display: flex;
     flex-direction: column;
     align-items: flex-end; /* Align items to the start (left) */
@@ -301,7 +302,7 @@ section:nth-child(4) {
 }
 
 .circle-container {
-    margin-right: 60px;
+    margin-right: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -310,7 +311,20 @@ section:nth-child(4) {
     overflow: hidden;
     border-radius: 50%;
     border: 5px solid white;
-    margin-bottom: 20px; /* Add margin bottom for space between image and text */
+}
+
+#new-circle {
+    background-color: white;
+    position: absolute; /* Position relative to the nearest positioned ancestor */
+    width: 80px;
+    height: 80px;
+    top: -20px; /* Adjust as needed to place above */
+    right: -70px; /* Adjust as needed to place to the right */
+    z-index: 2; /* Ensure it is above the existing circle */
+}
+
+#new-circle:hover {
+    transform: scale(1.2);
 }
 
 .circle-image {
@@ -319,7 +333,9 @@ section:nth-child(4) {
     object-fit: cover;
 }
 
+
 .text-container {
+    margin-top: 10px;
     padding: 10px 20px;
     background-color: white;
     border-radius: 10px;
@@ -375,3 +391,8 @@ section:nth-child(4) {
     margin: 0; /* Remove default margins from <h2> */
 }
 
+#Heading{
+    position: absolute;
+    font-family: Palatino, URW Palladio L, serif;
+    font-size: 50px;
+}
